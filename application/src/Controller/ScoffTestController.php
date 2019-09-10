@@ -18,7 +18,7 @@ class ScoffTestController extends AbstractController
         $form = $this-> createForm(ScoffTestType::class, $scoff);
         $form-> handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-
+            $request = $_POST;
         }
         return $this->render('scoff_test/index.html.twig', [
             'controller_name' => 'ScoffTestController',
