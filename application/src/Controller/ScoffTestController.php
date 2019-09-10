@@ -6,6 +6,7 @@ use App\Entity\ScoffTest;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Form\ScoffTestType;
+use Symfony\Component\HttpFoundation\Request;
 
 class ScoffTestController extends AbstractController
 {
