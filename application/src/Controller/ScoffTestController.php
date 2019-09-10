@@ -2,27 +2,20 @@
 
 namespace App\Controller;
 
-use App\Entity\ScoffTest;
+use App\Repository\ScoffTestRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Form\ScoffTestType;
-use Symfony\Component\HttpFoundation\Request;
 
 class ScoffTestController extends AbstractController
 {
     /**
      * @Route("/scoff-test", name="scoff_test")
      */
-    public function index()
+    public function index(ScoffTestRepository $scoffTestRepository) : Response
     {
-        $scoff = new ScoffTest();
-        $form = $this-> createForm(ScoffTestType::class, $scoff);
-        $form-> handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $request = $_POST;
-        }
         return $this->render('scoff_test/index.html.twig', [
-            'controller_name' => 'ScoffTestController',
+            'scoff_tests'=> $scoffTestRepository->findAll()
         ]);
     }
 }
