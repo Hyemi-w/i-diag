@@ -11,12 +11,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/scoff-test")
+ * @Route("/scoff-test-admin")
  */
 class ScoffTestControllerAdmin extends AbstractController
 {
     /**
-     * @Route("/", name="scoff_test_index", methods={"GET"})
+     * @Route("/", name="scoff_test_admin", methods={"GET"})
      */
     public function index(ScoffTestRepository $scoffTestRepository): Response
     {

@@ -10,7 +10,7 @@ use App\Form\ScoffTestType;
 class ScoffTestController extends AbstractController
 {
     /**
-     * @Route("/scoff/test", name="scoff_test")
+     * @Route("/scoff-test", name="scoff_test")
      */
     public function index()
     {
