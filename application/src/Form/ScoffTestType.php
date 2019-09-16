@@ -13,7 +13,7 @@ class ScoffTestType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $scoffTest = new ScoffTest();
-        $question = $scoffTest->getQuestion();
+        $questions = $scoffTest->getQuestion();
         foreach ($question as $questions) {
             $builder->add('question', ChoiceType::class, ['choices' => [
             'Oui' => '1',
