@@ -11,11 +11,10 @@ use Symfony\Component\Form\FormBuilderInterface;
 
 class ScoffTestType extends AbstractType
 {
-    public function buildForm(FormBuilderInterface $builder, array $options, ScoffTestRepository $scoffTestRepository)
+    public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $questions = $scoffTestRepository->findBy([]);
-        var_dump($questions);
-        foreach ($question as $questions) {
+        $questions = $scoffTestRepository->findAll();
+        foreach ($questions as $question) {
             $builder->add('question', ChoiceType::class, ['choices' => [
             'Oui' => '1',
             'Non' => '2'],

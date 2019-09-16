@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}coucou{% endblock %}
+
+{% block body %}
+    {{ form_start(form) }}
+        {% for test in tests %}
+            <label>
+                {{ test.question }}
+            </label>
+            {{ form_widget(form.question) }}
+        {% endfor %}
+    {{ form_end(form) }}
+{% endblock %}
