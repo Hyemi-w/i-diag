@@ -3,9 +3,12 @@
 {% block title %}Questionnaire SCOFF{% endblock %}
 
 {% block body %}
+    {{ form_start(form) }}
     {% for scofftest in scofftests %}
         <label>
             {{ scofftest.question }}
         </label>
+        {{ form_widget(form.question) }}
     {% endfor %}
+    {{ form_end(form) }}
 {% endblock %}
