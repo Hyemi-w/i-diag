@@ -20,7 +20,7 @@ class ScoffTestRepository extends ServiceEntityRepository
     }
 
     // /**
-    //  * @return ScoffTest[] Returns an array of ScoffTest objects
+    //  * @return ScoffTestFixtures[] Returns an array of ScoffTestFixtures objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ScoffTestRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?ScoffTest
+    public function findOneBySomeField($value): ?ScoffTestFixtures
     {
         return $this->createQueryBuilder('s')
             ->andWhere('s.exampleField = :val')

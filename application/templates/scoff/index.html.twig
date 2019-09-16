@@ -3,5 +3,9 @@
 {% block title %}Questionnaire SCOFF{% endblock %}
 
 {% block body %}
-
+    {% for scofftest in scofftests %}
+        <label>
+            {{ scofftest.question }}
+        </label>
+    {% endfor %}
 {% endblock %}
