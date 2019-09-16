@@ -8,7 +8,9 @@
         <label>
             {{ scofftest.question }}
         </label>
+        {% for widg in widget.question %}
         {{ form_widget(form.question) }}
+            {% endfor %}
     {% endfor %}
     {{ form_end(form) }}
 {% endblock %}
