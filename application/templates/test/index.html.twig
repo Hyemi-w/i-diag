@@ -4,11 +4,9 @@
 
 {% block body %}
     {{ form_start(form) }}
-        {% for test in tests %}
-            <label>
-                {{ test.question }}
-            </label>
-            {{ form_widget(form.question) }}
-        {% endfor %}
+        <label>
+            {{ test.question }}
+        </label>
+        {{ form_widget(widg) }}
     {{ form_end(form) }}
 {% endblock %}
