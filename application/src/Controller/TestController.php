@@ -16,13 +16,8 @@ class TestController extends AbstractController
      */
     public function index(TestRepository $testRepository) : Response
     {
-//        $test = new Test();
         $form = $this->createForm(TestType::class, null);
 
-//        $form->handleRequest($request);
-//        if ($form->isSubmitted() && $form->isValid()) {
-//            $test = $form->getData();
-//        }
         return $this->render('test/index.html.twig', [
             'tests' => $testRepository->findAll(),
             'form' => $form->createView(),

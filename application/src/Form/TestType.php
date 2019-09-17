@@ -16,7 +16,7 @@ class TestType extends AbstractType
         $builder
             ->add('question', EntityType::class, [
                 'class' => Test::class,
-                'multiple' => true,
+                'multiple' => false,
                 'expanded' => true,
                 'query_builder' => function (TestRepository $testRepository) {
                     return $testRepository->createQueryBuilder('t')
