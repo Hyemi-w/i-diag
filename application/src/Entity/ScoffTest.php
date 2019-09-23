@@ -28,7 +28,7 @@ class ScoffTest
 
     public function getQuestion(): ?string
     {
-        return $this->question->toArray();
+        return $this->question;
     }
 
     public function setQuestion(string $question): self
